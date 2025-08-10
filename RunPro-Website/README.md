@@ -1,6 +1,16 @@
-# 🏃‍♂️ CHAY - Premium Running Shoes Website
+# 🏃‍♂️ CHAY - Premium Running Shoes Website 2025
 
-A modern, responsive, and interactive website showcasing the exclusive CHAY brand running shoes with smooth animations, vibrant colors, and excellent user experience.
+A modern, responsive, and interactive website showcasing the exclusive CHAY brand running shoes with smooth animations, vibrant colors, and excellent user experience. **🔥 MEGA SALE: 50% OFF on ALL Products! 🔥**
+
+## 🎉 Special Offer - 50% OFF!
+
+**🔥 MEGA SALE: 50% OFF on ALL CHAY Products! 🔥**
+
+- **Running Shoes**: From $82.50 (was $165.00)
+- **Casual Shoes**: From $67.50 (was $135.00)  
+- **Formal Shoes**: From $97.50 (was $195.00)
+
+*Limited Time Only - Don't Miss Out!*
 
 ## ✨ Features
 
@@ -30,10 +40,13 @@ A modern, responsive, and interactive website showcasing the exclusive CHAY bran
 - **Micro-interactions**: Button press effects and hover states
 
 ### 🛍️ E-commerce Features
-- **Product Cards**: Beautiful product displays with images and details
+- **Product Cards**: Beautiful product displays with real shoe images and details
 - **Action Buttons**: Wishlist, quick view, and add to cart functionality
 - **Price Display**: Clear pricing with attractive styling
-- **Product Categories**: Different badge types (Trending, New, Best Seller, etc.)
+- **Product Categories**: Three main categories with unique badges:
+  - 🏃‍♂️ **Running Shoes**: Professional performance footwear (3 models)
+  - 👟 **Casual Shoes**: Everyday comfort and style (3 models)
+  - 👔 **Formal Shoes**: Business and professional excellence (3 models)
 
 ## 🛠️ Technologies Used
 
@@ -46,11 +59,12 @@ A modern, responsive, and interactive website showcasing the exclusive CHAY bran
 ## 📁 Project Structure
 
 ```
-ashok.prgm/
+RunPro-Website/
 ├── index.html          # Main HTML file
 ├── styles.css          # CSS styles and animations
 ├── script.js           # JavaScript functionality
-└── README.md           # Project documentation
+├── README.md           # Project documentation
+└── DEPLOYMENT.md       # Deployment instructions
 ```
 
 ## 🚀 Getting Started

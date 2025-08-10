@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHAY - Premium Running Shoes Collection 2024</title>
-    <meta name="description" content="Discover the exclusive CHAY brand running shoes of 2024. Vibrant colors, cutting-edge technology, and premium performance for every runner.">
+    <title>CHAY - Premium Running Shoes Collection 2025</title>
+    <meta name="description" content="Discover the exclusive CHAY brand running shoes of 2025. Vibrant colors, cutting-edge technology, and premium performance for every runner. 50% OFF on all products!">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Special Offer Banner -->
+    <div class="offer-banner">
+        <div class="container">
+            <p>🎉 MEGA SALE: 50% OFF on ALL CHAY Products! Limited Time Only! 🎉</p>
+        </div>
+    </div>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-                            <div class="nav-logo">
-                    <i class="fas fa-running"></i>
-                    <span>CHAY</span>
-                </div>
+            <div class="nav-logo">
+                <i class="fas fa-running"></i>
+                <span>CHAY</span>
+            </div>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#home" class="nav-link">Home</a>
@@ -26,6 +33,9 @@
                 </li>
                 <li class="nav-item">
                     <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#brand-ambassador" class="nav-link">Ambassador</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
@@ -43,14 +53,15 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">CHAY - Premium Running Shoes of 2024</h1>
+                <h1 class="hero-title">CHAY - Premium Running Shoes of 2025</h1>
                 <p class="hero-description">
                     Experience ultimate comfort and performance with our exclusive CHAY collection. 
                     Every step counts, make it count with the perfect pair of CHAY shoes.
+                    <span class="offer-badge">🔥 50% OFF on ALL Products! 🔥</span>
                 </p>
                 <div class="hero-buttons">
                     <button class="btn btn-primary">Shop Now</button>
-                    <button class="btn btn-secondary">Learn More</button>
+                    <button class="btn btn-secondary" id="learnMoreBtn">Learn More</button>
                 </div>
             </div>
             <div class="hero-image">
@@ -59,179 +70,380 @@
         </div>
     </section>
 
+    <!-- Learn More Modal -->
+    <div id="learnMoreModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Discover CHAY Technology</h2>
+            <div class="modal-gallery">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&h=400&fit=crop&q=90" alt="CHAY Lifestyle - Man with White Sneakers">
+                    <h3>CHAY Lifestyle Collection</h3>
+                    <p>Experience comfort and style with our premium white sneakers - perfect for everyday wear</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=400&fit=crop&q=90" alt="CHAY Technology 2">
+                    <h3>Cloud Cushioning</h3>
+                    <p>Advanced foam technology for maximum comfort</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=400&fit=crop&q=90" alt="CHAY Technology 3">
+                    <h3>Energy Return System</h3>
+                    <p>Boost your performance with every step</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&h=400&fit=crop&q=80" alt="CHAY Premium White Sneakers">
+                    <h3>Premium White Sneakers</h3>
+                    <p>Classic design meets modern comfort - the perfect everyday companion</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Out of Stock Modal -->
+    <div id="outOfStockModal" class="modal out-of-stock-modal">
+        <div class="modal-content out-of-stock-content">
+            <span class="close-modal">&times;</span>
+            <h2>⚠️ Out of Stock</h2>
+            <p>Sorry, this product is currently out of stock. Please select another one from our collection.</p>
+            <button class="btn btn-primary" onclick="closeOutOfStockModal()">Continue Shopping</button>
+        </div>
+    </div>
+
     <!-- Shoes Section -->
     <section id="shoes" class="shoes-section">
         <div class="container">
             <div class="section-header">
                 <h2>CHAY Collection</h2>
-                <p>Discover our exclusive CHAY brand shoes with vibrant colors and cutting-edge technology</p>
+                <p>Discover our exclusive CHAY brand shoes in three premium categories: Running, Casual, and Formal</p>
             </div>
-            <div class="shoes-grid">
-                <!-- CHAY Brand Shoes -->
-                <div class="shoe-card">
-                    <div class="shoe-image chay-1">
-                        <div class="badge">Trending</div>
-                        <div class="card-actions">
-                            <button class="action-btn"><i class="fas fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+            
+            <!-- Running Shoes Section -->
+            <div class="category-section">
+                <h3 class="category-title">🏃‍♂️ Running Shoes</h3>
+                <div class="shoes-grid">
+                    <div class="shoe-card" data-category="running">
+                        <div class="shoe-image">
+                            <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=400&fit=crop&q=80" alt="CHAY Velocity Pro Running Shoes">
+                            <div class="badge">Trending</div>
+                            <div class="card-actions">
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="shoe-info">
+                            <h3>CHAY Velocity Pro</h3>
+                            <p>Professional running shoes with carbon fiber technology for ultimate speed and performance.</p>
+                            <div class="shoe-footer">
+                                <div class="price-container">
+                                    <span class="original-price">$185.00</span>
+                                    <span class="discounted-price">$92.50</span>
+                                    <span class="discount-badge">50% OFF</span>
+                                </div>
+                                <button class="add-to-cart" data-shoe="CHAY Velocity Pro">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="shoe-info">
-                        <h3>CHAY Velocity Pro</h3>
-                        <p>Electric blue racing shoes with carbon fiber technology for ultimate speed.</p>
-                        <div class="shoe-footer">
-                            <span class="price">$185.00</span>
-                            <button class="add-to-cart">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add to Cart
-                            </button>
+
+                    <div class="shoe-card" data-category="running">
+                        <div class="shoe-image">
+                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&h=400&fit=crop&q=80" alt="CHAY Cloud Runner Shoes">
+                            <div class="badge">New</div>
+                            <div class="card-actions">
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="shoe-info">
+                            <h3>CHAY Cloud Runner</h3>
+                            <p>Lightweight comfort shoes with cloud-like cushioning for long-distance running.</p>
+                            <div class="shoe-footer">
+                                <div class="price-container">
+                                    <span class="original-price">$165.00</span>
+                                    <span class="discounted-price">$82.50</span>
+                                    <span class="discount-badge">50% OFF</span>
+                                </div>
+                                <button class="add-to-cart" data-shoe="CHAY Cloud Runner">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shoe-card" data-category="running">
+                        <div class="shoe-image">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=400&fit=crop&q=80" alt="CHAY Solar Boost Shoes">
+                            <div class="badge">Best Seller</div>
+                            <div class="card-actions">
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="shoe-info">
+                            <h3>CHAY Solar Boost</h3>
+                            <p>High-performance running shoes with advanced energy return technology.</p>
+                            <div class="shoe-footer">
+                                <div class="price-container">
+                                    <span class="original-price">$195.00</span>
+                                    <span class="discounted-price">$97.50</span>
+                                    <span class="discount-badge">50% OFF</span>
+                                </div>
+                                <button class="add-to-cart" data-shoe="CHAY Solar Boost">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shoe-card" data-category="running">
+                        <div class="shoe-image">
+                            <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500&h=400&fit=crop&q=80" alt="CHAY Speed Demon Shoes">
+                            <div class="badge">Limited</div>
+                            <div class="card-actions">
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="shoe-info">
+                            <h3>CHAY Speed Demon</h3>
+                            <p>Ultra-lightweight racing shoes designed for competitive runners and speed enthusiasts.</p>
+                            <div class="shoe-footer">
+                                <div class="price-container">
+                                    <span class="original-price">$220.00</span>
+                                    <span class="discounted-price">$110.00</span>
+                                    <span class="discount-badge">50% OFF</span>
+                                </div>
+                                <button class="add-to-cart" data-shoe="CHAY Speed Demon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="shoe-card">
-                    <div class="shoe-image chay-2">
-                        <div class="badge">New</div>
-                        <div class="card-actions">
-                            <button class="action-btn"><i class="fas fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+            <!-- Casual Shoes Section -->
+            <div class="category-section">
+                <h3 class="category-title">👟 Casual Shoes</h3>
+                <div class="shoes-grid">
+                    <div class="shoe-card" data-category="casual">
+                        <div class="shoe-image">
+                            <img src="https://images.unsplash.com/photo-1562183241-b937e95585b6?w=500&h=400&fit=crop&q=80" alt="CHAY Street Walker Casual Shoes">
+                            <div class="badge">Popular</div>
+                            <div class="card-actions">
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="shoe-info">
+                            <h3>CHAY Street Walker</h3>
+                            <p>Comfortable casual shoes perfect for everyday wear and urban adventures.</p>
+                            <div class="shoe-footer">
+                                <div class="price-container">
+                                    <span class="original-price">$145.00</span>
+                                    <span class="discounted-price">$72.50</span>
+                                    <span class="discount-badge">50% OFF</span>
+                                </div>
+                                <button class="add-to-cart" data-shoe="CHAY Street Walker">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="shoe-info">
-                        <h3>CHAY Cloud Runner</h3>
-                        <p>Neon green comfort shoes with cloud-like cushioning for long distances.</p>
-                        <div class="shoe-footer">
-                            <span class="price">$165.00</span>
-                            <button class="add-to-cart">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add to Cart
-                            </button>
+
+                    <div class="shoe-card" data-category="casual">
+                        <div class="shoe-image">
+                            <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500&h=400&fit=crop&q=80" alt="CHAY Urban Explorer Shoes">
+                            <div class="badge">Featured</div>
+                            <div class="card-actions">
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="shoe-info">
+                            <h3>CHAY Urban Explorer</h3>
+                            <p>Stylish casual shoes with modern design for the fashion-conscious individual.</p>
+                            <div class="shoe-footer">
+                                <div class="price-container">
+                                    <span class="original-price">$155.00</span>
+                                    <span class="discounted-price">$77.50</span>
+                                    <span class="discount-badge">50% OFF</span>
+                                </div>
+                                <button class="add-to-cart" data-shoe="CHAY Urban Explorer">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shoe-card" data-category="casual">
+                        <div class="shoe-image">
+                            <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=500&h=400&fit=crop&q=80" alt="CHAY Weekend Cruiser Shoes">
+                            <div class="badge">New</div>
+                            <div class="card-actions">
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="shoe-info">
+                            <h3>CHAY Weekend Cruiser</h3>
+                            <p>Relaxed weekend shoes with premium comfort for laid-back style.</p>
+                            <div class="shoe-footer">
+                                <div class="price-container">
+                                    <span class="original-price">$135.00</span>
+                                    <span class="discounted-price">$67.50</span>
+                                    <span class="discount-badge">50% OFF</span>
+                                </div>
+                                <button class="add-to-cart" data-shoe="CHAY Weekend Cruiser">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shoe-card" data-category="casual">
+                        <div class="shoe-image">
+                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&h=400&fit=crop&q=80" alt="CHAY Lifestyle Sneaker">
+                            <div class="badge">Trending</div>
+                            <div class="card-actions">
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="shoe-info">
+                            <h3>CHAY Lifestyle Sneaker</h3>
+                            <p>Versatile sneakers that blend comfort with street style for any occasion.</p>
+                            <div class="shoe-footer">
+                                <div class="price-container">
+                                    <span class="original-price">$125.00</span>
+                                    <span class="discounted-price">$62.50</span>
+                                    <span class="discount-badge">50% OFF</span>
+                                </div>
+                                <button class="add-to-cart" data-shoe="CHAY Lifestyle Sneaker">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="shoe-card">
-                    <div class="shoe-image chay-3">
-                        <div class="badge">Best Seller</div>
-                        <div class="card-actions">
-                            <button class="action-btn"><i class="fas fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+            <!-- Formal Shoes Section -->
+            <div class="category-section">
+                <h3 class="category-title">👔 Formal Shoes</h3>
+                <div class="shoes-grid">
+                    <div class="shoe-card" data-category="formal">
+                        <div class="shoe-image">
+                            <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=500&h=400&fit=crop&q=80" alt="CHAY Executive Elite Formal Shoes">
+                            <div class="badge">Premium</div>
+                            <div class="card-actions">
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="shoe-info">
+                            <h3>CHAY Executive Elite</h3>
+                            <p>Classic formal shoes crafted from premium leather for professional excellence.</p>
+                            <div class="shoe-footer">
+                                <div class="price-container">
+                                    <span class="original-price">$225.00</span>
+                                    <span class="discounted-price">$112.50</span>
+                                    <span class="discount-badge">50% OFF</span>
+                                </div>
+                                <button class="add-to-cart" data-shoe="CHAY Executive Elite">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="shoe-info">
-                        <h3>CHAY Solar Boost</h3>
-                        <p>Sunset orange shoes with solar-powered LED lighting system.</p>
-                        <div class="shoe-footer">
-                            <span class="price">$195.00</span>
-                            <button class="add-to-cart">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="shoe-card">
-                    <div class="shoe-image chay-4">
-                        <div class="badge">Limited</div>
-                        <div class="card-actions">
-                            <button class="action-btn"><i class="fas fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                    <div class="shoe-card" data-category="formal">
+                        <div class="shoe-image">
+                            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500&h=400&fit=crop&q=80" alt="CHAY Business Classic Formal Shoes">
+                            <div class="badge">Limited</div>
+                            <div class="card-actions">
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="shoe-info">
+                            <h3>CHAY Business Classic</h3>
+                            <p>Timeless business shoes with sophisticated design and superior craftsmanship.</p>
+                            <div class="shoe-footer">
+                                <div class="price-container">
+                                    <span class="original-price">$195.00</span>
+                                    <span class="discounted-price">$97.50</span>
+                                    <span class="discount-badge">50% OFF</span>
+                                </div>
+                                <button class="add-to-cart" data-shoe="CHAY Business Classic">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="shoe-info">
-                        <h3>CHAY Midnight Elite</h3>
-                        <p>Deep purple premium shoes with reflective elements for night running.</p>
-                        <div class="shoe-footer">
-                            <span class="price">$220.00</span>
-                            <button class="add-to-cart">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="shoe-card">
-                    <div class="shoe-image chay-5">
-                        <div class="badge">Popular</div>
-                        <div class="card-actions">
-                            <button class="action-btn"><i class="fas fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                    <div class="shoe-card" data-category="formal">
+                        <div class="shoe-image">
+                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&h=400&fit=crop&q=80" alt="CHAY Luxury Oxford Formal Shoes">
+                            <div class="badge">Exclusive</div>
+                            <div class="card-actions">
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="shoe-info">
+                            <h3>CHAY Luxury Oxford</h3>
+                            <p>Handcrafted Oxford shoes with premium materials for the distinguished gentleman.</p>
+                            <div class="shoe-footer">
+                                <div class="price-container">
+                                    <span class="original-price">$285.00</span>
+                                    <span class="discounted-price">$142.50</span>
+                                    <span class="discount-badge">50% OFF</span>
+                                </div>
+                                <button class="add-to-cart" data-shoe="CHAY Luxury Oxford">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="shoe-info">
-                        <h3>CHAY Fire Storm</h3>
-                        <p>Fiery red performance shoes with heat-resistant materials and ventilation.</p>
-                        <div class="shoe-footer">
-                            <span class="price">$175.00</span>
-                            <button class="add-to-cart">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="shoe-card">
-                    <div class="shoe-image chay-6">
-                        <div class="badge">Featured</div>
-                        <div class="card-actions">
-                            <button class="action-btn"><i class="fas fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-eye"></i></button>
+                    <div class="shoe-card" data-category="formal">
+                        <div class="shoe-image">
+                            <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&h=400&fit=crop&q=80" alt="CHAY Modern Loafer">
+                            <div class="badge">New</div>
+                            <div class="card-actions">
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shoe-info">
-                        <h3>CHAY Ocean Wave</h3>
-                        <p>Turquoise blue shoes with water-repellent technology and wave-inspired design.</p>
-                        <div class="shoe-footer">
-                            <span class="price">$185.00</span>
-                            <button class="add-to-cart">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="shoe-card">
-                    <div class="shoe-image chay-7">
-                        <div class="badge">Exclusive</div>
-                        <div class="card-actions">
-                            <button class="action-btn"><i class="fas fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-eye"></i></button>
-                        </div>
-                    </div>
-                    <div class="shoe-info">
-                        <h3>CHAY Golden Phoenix</h3>
-                        <p>Metallic gold luxury shoes with premium leather and diamond accents.</p>
-                        <div class="shoe-footer">
-                            <span class="price">$295.00</span>
-                            <button class="add-to-cart">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="shoe-card">
-                    <div class="shoe-image chay-8">
-                        <div class="badge">Premium</div>
-                        <div class="card-actions">
-                            <button class="action-btn"><i class="fas fa-heart"></i></button>
-                            <button class="action-btn"><i class="fas fa-eye"></i></button>
-                        </div>
-                    </div>
-                    <div class="shoe-info">
-                        <h3>CHAY Silver Lightning</h3>
-                        <p>Silver metallic shoes with lightning bolt design and speed technology.</p>
-                        <div class="shoe-footer">
-                            <span class="price">$210.00</span>
-                            <button class="add-to-cart">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add to Cart
-                            </button>
+                        <div class="shoe-info">
+                            <h3>CHAY Modern Loafer</h3>
+                            <p>Contemporary loafer design with premium comfort for modern professionals.</p>
+                            <div class="shoe-footer">
+                                <div class="price-container">
+                                    <span class="original-price">$175.00</span>
+                                    <span class="discounted-price">$87.50</span>
+                                    <span class="discount-badge">50% OFF</span>
+                                </div>
+                                <button class="add-to-cart" data-shoe="CHAY Modern Loafer">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -268,8 +480,43 @@
         </div>
     </section>
 
+    <!-- Brand Ambassador Section -->
+    <section id="brand-ambassador" class="brand-ambassador-section">
+        <div class="ambassador-background"></div>
+        <div class="container">
+            <div class="ambassador-content">
+                <h2>Meet Our Brand Ambassador</h2>
+                <p>Representing the spirit of excellence and performance</p>
+                <div class="ambassador-profile">
+                    <div class="ambassador-image">
+                        <img src="brand-ambassador.jpg" alt="CHAY Brand Ambassador">
+                    </div>
+                    <div class="ambassador-info">
+                        <h3>CHAY Elite Athlete</h3>
+                        <p>Our brand ambassador embodies the values of dedication, performance, and style that CHAY represents. With years of experience in professional athletics, they understand what it takes to push boundaries and achieve excellence.</p>
+                        <div class="ambassador-stats">
+                            <div class="stat">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Marathons</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Commitment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
+        <div class="contact-background"></div>
         <div class="container">
             <div class="contact-content">
                 <h2>Get in Touch</h2>
@@ -326,7 +573,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 CHAY. All rights reserved.</p>
+                <p>&copy; 2025 CHAY. All rights reserved.</p>
             </div>
         </div>
     </footer>
